@@ -1,0 +1,17 @@
+
+table.boxed {
+margin : 3px auto;
+text-align : center;
+	border: solid thin #000;
+	border-collapse: collapse;
+	}
+
+table.boxed caption {
+	font-weight : bold;
+	padding-bottom : 0.25em;
+}
+	
+table.boxed td, table.boxed th {
+	border: solid thin #000;
+	padding: 3px;
+	}

@@ -1,3 +1,5 @@
+---
+---
 // Core variables and mixins
 @import "base/variables.scss";
 @import "base/mixins.scss";
@@ -8,6 +10,7 @@
 // Components
 @import "components/buttons.scss";
 @import "components/navbar.scss";
+@import "components/tables.scss";
 
 // Layout
 @import "layout/masthead.scss";
@@ -17,3 +20,4 @@
 @import "layout/team.scss";
 @import "layout/contact.scss";
 @import "layout/footer.scss";
+

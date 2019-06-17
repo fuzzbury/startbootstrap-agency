@@ -28,7 +28,7 @@
         font-weight: 400;
         padding: 0.75em 0;
         letter-spacing: 1px;
-        color: white;
+        color: black;
         @include heading-font;
         &.active,
         &:hover {
@@ -57,6 +57,7 @@
       .nav-item {
         .nav-link {
           padding: 1.1em 1em !important;
+		  color: white;
         }
       }
     }
