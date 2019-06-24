@@ -1,2 +1,7 @@
 sass:
     sass_dir: scss
+    
+url: "https://www.grahamandson.co.uk" # the base hostname & protocol for your site
+enforce_ssl: www.grahamandson.co.uk
+plugins:
+  - jekyll-sitemap
