@@ -106,7 +106,8 @@ img::-moz-selection {
     -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
     transition: padding-top 0.3s, padding-bottom 0.3s;
     border: none;
-    background-color: transparent; }
+    background-color: transparent;
+    colour: white; }
     #mainNav .navbar-brand {
       font-size: 1.75em;
       -webkit-transition: all 0.3s;
@@ -114,7 +115,7 @@ img::-moz-selection {
       transition: all 0.3s; }
     #mainNav .navbar-nav .nav-item .nav-link {
       padding: 1.1em 1em !important;
-      color: white; }
+      color: black; }
     #mainNav.navbar-shrink {
       padding-top: 0;
       padding-bottom: 0;
@@ -122,7 +123,11 @@ img::-moz-selection {
       #mainNav.navbar-shrink .navbar-brand {
         font-size: 1.25em;
         padding: 12px 0;
-        color: white; } }
+        color: white; }
+      #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link {
+        color: white; }
+        #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link.active, #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link:hover {
+          color: #fed136; } }
 table.boxed {
   margin: 3px auto;
   text-align: center;
@@ -140,7 +145,7 @@ table.boxed td, table.boxed th {
 header.masthead {
   text-align: center;
   color: black;
-  background-image: url("../img/header-bg.jpg");
+  background-image: url("../img/portfolio/Decorating.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -189,7 +194,8 @@ header.masthead {
     display: block;
     max-width: 400px;
     margin: 0 auto;
-    cursor: pointer; }
+    cursor: pointer;
+    color: black; }
     #portfolio .portfolio-item .portfolio-link .portfolio-hover {
       position: absolute;
       width: 100%;

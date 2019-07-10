@@ -17,7 +17,7 @@ $message = strip_tags(htmlspecialchars($_POST['message']));
    
 // Create the email and send the message
 $recipients = array(
-  "me@john-gay.com",
+  "me@john-gay.com","office@grahamandson.co.uk","elainewherry@yahoo.co.uk","grahamwars@yahoo.co.uk"
   // more emails
 );
 $to = implode(',', $recipients); // your email address
