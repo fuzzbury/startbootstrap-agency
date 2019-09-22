@@ -222,15 +222,16 @@ phone_link: "tel:07970759671"
 																							</div>
 																						</div>
 																						<div class="picture" itemscope itemtype="http://schema.org/ImageGallery">
-																							<p><strong>Internal Work Gallery</strong></p>
+																							
 																							<div class="picture" itemscope itemtype="http://schema.org/ImageGallery">
+																							<p><strong>Internal Work Gallery</strong></p>
 																								<div class="container">
 																									<div class="row">																							
 
 
 																										<div class="col-auto">
 																											<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-																												<a href="img/gallery/internal/pic_001_1200x1600.jpg" itemprop="contentUrl" data-size="1200x1600" data-index="0" data-title="Work in Progress">
+																												<a href="img/gallery/internal/pic_001_1200x1600.jpg" itemprop="contentUrl" data-size="1200x1600" data-index="0" data-title="Big Job before the start, the fireplace will be removed">
 																													<img src="img/gallery/internal/pic_001_thumb.jpg" height="200" width="150" itemprop="thumbnail" alt="">
 																													</a>
 																												</figure>
@@ -238,7 +239,7 @@ phone_link: "tel:07970759671"
 
 																											<div class="col-auto">
 																												<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-																													<a href="img/gallery/internal/pic_002_1200x1600.jpg" itemprop="contentUrl" data-size="1200x1600" data-index="1", data-title="Finished">
+																													<a href="img/gallery/internal/pic_002_1200x1600.jpg" itemprop="contentUrl" data-size="1200x1600" data-index="1", data-title="Work in progress">
 																														<img src="img/gallery/internal/pic_002_thumb.jpg" height="200" width="150" itemprop="thumbnail" alt="">
 																														</a>
 																													</figure>
@@ -247,16 +248,24 @@ phone_link: "tel:07970759671"
 
 																												<div class="col-auto">
 																													<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-																														<a href="img/gallery/internal/pic_003_1200x1600.jpg" itemprop="contentUrl" data-size="1200x1600" data-index="2", data-title="Repairing the stairs walls">
-																															<img src="img/gallery/internal/pic_003_thumb.jpg" height="200" width="150" itemprop="thumbnail" alt="">
+																														<a href="img/gallery/internal/pic_003_1600x1200.jpg" itemprop="contentUrl" data-size="1600x1200" data-index="2", data-title="Finshed, fireplace removed and wall plastered and painted">
+																															<img src="img/gallery/internal/pic_003_thumb.jpg" height="200" width="267" itemprop="thumbnail" alt="">
 																															</a>
 																														</figure>
 																													</div>
+																													
+																												<div class="col-auto">
+																														<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+																															<a href="img/gallery/internal/pic_006_900x1600.jpg" itemprop="contentUrl" data-size="900x1600" data-index="3", data-title="Painting with wooden beams">
+																																<img src="img/gallery/internal/pic_006_thumb.jpg" height="200" width="150" itemprop="thumbnail" alt="">
+																																</a>
+																															</figure>
+																														</div>
 
 
 																													<div class="col-auto">
 																														<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-																															<a href="img/gallery/internal/pic_004_1600x1200.jpg" itemprop="contentUrl" data-size="1600x1200" data-index="3", data-title="Finished Stairs">
+																															<a href="img/gallery/internal/pic_004_1200x1600.jpg" itemprop="contentUrl" data-size="1200x1600" data-index="4", data-title="Reparing stairs wall prior to painting">
 																																<img src="img/gallery/internal/pic_004_thumb.jpg" height="200" width="150" itemprop="thumbnail" alt="">
 																																</a>
 																															</figure>
@@ -265,11 +274,22 @@ phone_link: "tel:07970759671"
 
 																														<div class="col-auto">
 																															<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-																																<a href="img/gallery/internal/pic_005_900x1600.jpg" itemprop="contentUrl" data-size="900x1600" data-index="5", data-title="Painting with wooden beams">
+																																<a href="img/gallery/internal/pic_005_1600x1200.jpg" itemprop="contentUrl" data-size="1600x1200" data-index="5", data-title="Finished stairs">
 																																	<img src="img/gallery/internal/pic_005_thumb.jpg" height="200" width="150" itemprop="thumbnail" alt="">
 																																	</a>
 																																</figure>
 																															</div>
+																															
+																														
+																															
+																														<div class="col-auto">
+																															<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+																																<a href="img/gallery/internal/pic_007_1200x1599.jpg" itemprop="contentUrl" data-size="1200x1599" data-index="6", data-title="Installing a feature wall">
+																																	<img src="img/gallery/internal/pic_007_thumb.jpg" height="200" width="150" itemprop="thumbnail" alt="">
+																																	</a>
+																																</figure>
+																															</div>
+																															
 																														</div>
 
 																													</div>
@@ -789,12 +809,14 @@ phone_link: "tel:07970759671"
                         $width  = $size[0],
                         $height = $size[1],
 						$title   = $(this).data('title');
+						$index = $(this).data('index');
 
                     var item = {
                         src : $href,
                         w   : $width,
                         h   : $height,
 						title: $title,
+						index: $index 
                     }
 
                     items.push(item);
@@ -812,10 +834,9 @@ phone_link: "tel:07970759671"
         $pic.on('click', 'figure', function(event) {
             event.preventDefault();
 
-            var $index = $(this).index();
+            var $index = parseInt(this.children[0].getAttribute('data-index'))
             var options = {
 
-				//galleryUID: galleryElement.getAttribute('data-pswp-uid'),
                 index: $index,
                 bgOpacity: 0.7,
                 showHideOpacity: true,
