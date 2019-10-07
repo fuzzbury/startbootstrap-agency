@@ -1,9 +1,21 @@
+justify
 body {
   overflow-x: hidden;
   font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; }
 
 p {
-  line-height: 1.75; }
+  line-height: 1.75;
+  text-align: justify;
+  margin: 0 0 1.5em;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 1.5em;
+  margin-left: 0px; }
+
+.scale-image {
+  display: block;
+  width: 100%;
+  height: auto; }
 
 a {
   color: #fed136; }

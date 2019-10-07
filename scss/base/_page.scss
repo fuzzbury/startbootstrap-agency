@@ -1,4 +1,4 @@
-// Global styling for this template
+justify// Global styling for this template
 body {
   overflow-x: hidden;
   @include body-font;
@@ -6,6 +6,16 @@ body {
 
 p {
   line-height: 1.75;
+  text-align: justify;
+  margin: 0 0 1.5em;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 1.5em;
+  margin-left: 0px;
+}
+
+.scale-image {
+	display:block; width:100%; height:auto;
 }
 
 a {
